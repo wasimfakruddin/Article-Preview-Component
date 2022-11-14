@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'manrope', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background-color: hsl(210, 46%, 95%);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  max-width: 700px;
+  grid-template-columns: 280px minmax(300px, 700px);
+  background-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.img {
+  width: 300px;
+  height: 350px;
+  margin-right: 40px;
+  grid-template-columns: 300px;
+  border-radius: 10px 0 0 10px;
+  float: left;
+}
+
+.title {
+  margin: 40px 20px 15px 20px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.text {
+  margin: 20px 40px 20px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.author {
+  display: flex;
+  float: left;
+  margin-top: 20px;
+  width: 20%;
+  font-family: 'manrope', sans-serif;
+}
+
+.name{
+  width:150px;
+  font-size:15px;
+  font-weight: 700;
+  margin-left:20px;
+  margin-top: 10px;
+}
+.date{
+  font-size:13px;
+  margin-left:20px;
+  margin-top: -15px;
+}
+.avater {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+  .button{
+    width:40px;
+    height: 40px;
+margin-left:40px;
+    border-radius:50%;
+    border:none;
+    cursor: pointer;
+    display: inline-block; 
+}
+.button:hover{
+background-color:hsl(217, 19%, 35%) ;
+}
+
+
+.popup {
+  float: left;
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .popup .popuptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: hsl(217, 19%, 35%);
+    color: grey;
+    margin: 10px 0 15px -115px;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 100%;
+  }
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+@media screen and (max-width: 700px) {
+.img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 20px;
+}
+
+.title{
+  margin-top: 50px;
+  text-align: center;
+}
+.text{
+  text-align: center;
+}
+
+.author{
+  display: flex;
+}
+
+.avater {
+  margin:0 0 50px 80px;
+  width: 50%;
+  height: 50%;
+}
+
+.button{
+  margin:10px 0 0 150px;
+}
+.popup .popuptext {
+  margin:15px 0 0 -85px;
+}
+
